@@ -1,0 +1,20 @@
+{
+  "name": "webpack5-ts-vue3-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CokeBeliever/webpack5-ts-vue3-boilerplate.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CokeBeliever/webpack5-ts-vue3-boilerplate/issues"
+  },
+  "homepage": "https://github.com/CokeBeliever/webpack5-ts-vue3-boilerplate#readme"
+}
