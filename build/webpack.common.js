@@ -18,4 +18,10 @@ module.exports = {
       title: "webpack5+ts+vue3",
     }),
   ],
+  resolve: {
+    alias: {
+      "@": path.resolve(PROJ_ROOT, "src"),
+    },
+    extensions: [".ts", ".js"],
+  },
 };
