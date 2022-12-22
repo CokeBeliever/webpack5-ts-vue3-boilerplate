@@ -1,14 +1,9 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-const PROJ_ROOT = path.resolve(__dirname);
+const PROJ_ROOT = path.resolve(__dirname, "..");
 
 module.exports = {
-  mode: "development",
-  devServer: {
-    hot: true,
-    open: true,
-  },
   entry: {
     main: path.resolve(PROJ_ROOT, "src/index.js"),
   },
