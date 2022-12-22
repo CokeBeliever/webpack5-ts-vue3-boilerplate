@@ -1,4 +1,5 @@
 const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const PROJ_ROOT = path.resolve(__dirname);
 
@@ -12,4 +13,9 @@ module.exports = {
     chunkFilename: "js/[name].js",
     clean: true,
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: "webpack5+ts+vue3",
+    }),
+  ],
 };

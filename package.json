@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/CokeBeliever/webpack5-ts-vue3-boilerplate#readme",
   "devDependencies": {
+    "html-webpack-plugin": "^5.5.0",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1"
   }
