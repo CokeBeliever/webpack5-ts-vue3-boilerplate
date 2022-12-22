@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/CokeBeliever/webpack5-ts-vue3-boilerplate/issues"
   },
-  "homepage": "https://github.com/CokeBeliever/webpack5-ts-vue3-boilerplate#readme"
+  "homepage": "https://github.com/CokeBeliever/webpack5-ts-vue3-boilerplate#readme",
+  "devDependencies": {
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  }
 }
