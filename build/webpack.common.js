@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const postcssPresetEnv = require("postcss-preset-env");
+const { VueLoaderPlugin } = require("vue-loader");
 
 const PROJ_ROOT = path.resolve(__dirname, "..");
 
@@ -17,7 +18,9 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: "webpack5+ts+vue3",
+      template: "./public/index.html",
     }),
+    new VueLoaderPlugin(),
   ],
   resolve: {
     alias: {
@@ -42,6 +45,10 @@ module.exports = {
           },
           "sass-loader",
         ],
+      },
+      {
+        test: /\.vue$/,
+        use: ["vue-loader"],
       },
     ],
   },
