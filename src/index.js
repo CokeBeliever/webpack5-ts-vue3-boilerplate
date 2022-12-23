@@ -1,2 +1,1 @@
-const name = "CokeBeliever";
-console.log(name);
+import "@/index.scss";

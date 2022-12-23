@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const postcssPresetEnv = require("postcss-preset-env");
 
 const PROJ_ROOT = path.resolve(__dirname, "..");
 
@@ -23,5 +24,25 @@ module.exports = {
       "@": path.resolve(PROJ_ROOT, "src"),
     },
     extensions: [".ts", ".js"],
+  },
+  module: {
+    rules: [
+      {
+        test: /\.(sa|sc|c)ss$/,
+        use: [
+          "style-loader",
+          "css-loader",
+          {
+            loader: "postcss-loader",
+            options: {
+              postcssOptions: {
+                plugins: [postcssPresetEnv()],
+              },
+            },
+          },
+          "sass-loader",
+        ],
+      },
+    ],
   },
 };
