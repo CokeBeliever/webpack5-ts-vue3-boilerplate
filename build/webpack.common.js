@@ -50,6 +50,27 @@ module.exports = {
         test: /\.vue$/,
         use: ["vue-loader"],
       },
+      {
+        test: /\.(png|svg|jpe?g|gif)$/,
+        include: path.resolve(PROJ_ROOT, "src/assets/image"),
+        type: "asset",
+        generator: {
+          filename: "image/[hash][ext]",
+        },
+        parser: {
+          dataUrlCondition: {
+            maxSize: 4 * 1024,
+          },
+        },
+      },
+      {
+        test: /\.(eot|svg|ttf|woff2?)$/,
+        include: path.resolve(PROJ_ROOT, "src/assets/font"),
+        type: "asset/resource",
+        generator: {
+          filename: "font/[hash][ext]",
+        },
+      },
     ],
   },
 };

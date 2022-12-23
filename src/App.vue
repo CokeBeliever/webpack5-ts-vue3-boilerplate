@@ -1,6 +1,7 @@
 <template>
   <div>
     <h1>{{ name }}</h1>
+    <img src="@/assets/image/avatar.png" />
   </div>
 </template>
 
@@ -9,8 +10,14 @@ const name = "CokeBeliever";
 </script>
 
 <style lang="scss" scoped>
-h1 {
+div {
   text-align: center;
   color: blue;
+
+  img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
 }
 </style>
