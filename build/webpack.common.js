@@ -7,7 +7,7 @@ const PROJ_ROOT = path.resolve(__dirname, "..");
 
 module.exports = {
   entry: {
-    main: path.resolve(PROJ_ROOT, "src/index.js"),
+    main: path.resolve(PROJ_ROOT, "src/index.ts"),
   },
   output: {
     filename: "js/[name].bundle.js",
@@ -69,6 +69,26 @@ module.exports = {
         type: "asset/resource",
         generator: {
           filename: "font/[hash][ext]",
+        },
+      },
+      {
+        test: /\.m?(t|j)s$/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: [
+              "@babel/preset-env",
+              ["@babel/preset-typescript", { allExtensions: true }],
+            ],
+            plugins: [
+              [
+                "@babel/plugin-transform-runtime",
+                {
+                  corejs: 3,
+                },
+              ],
+            ],
+          },
         },
       },
     ],
